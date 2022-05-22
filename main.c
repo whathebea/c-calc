@@ -10,7 +10,7 @@ int main() {
  setlocale(LC_ALL, "Portuguese");
 
 
-INICIO: printf("\n 1 - Para converter de BIN para DEC. \n 2 - Para converter de DEC para BIN. \n 3 - Para SAIR. \n ");
+INICIO: printf("\n Digite 1 para converter de BIN para DEC. \n Digite 2 para converter de DEC para BIN. \n Digite 3 para SAIR. \n ");
  scanf("%d", &opt);
 
  switch (opt)
@@ -20,7 +20,7 @@ INICIO: printf("\n 1 - Para converter de BIN para DEC. \n 2 - Para converter de 
     binToDec();
 
 
-    printf("\n 1 - Para continuar \n 2 - Para sair \n");
+    printf("\n Digite 1 para continuar \n  Digite 2 para sair \n");
     scanf("%d", &resp);
     system("cls");
     while(resp == 1) {
@@ -34,7 +34,7 @@ INICIO: printf("\n 1 - Para converter de BIN para DEC. \n 2 - Para converter de 
      decToBin();
 
 
-     printf("\n 1 - Para continuar \n 2 - Para sair \n");
+     printf("\n Digite 1 para continuar \n  Digite 2 para sair \n");
      scanf("%d", &resp);
      system("cls");
      while(resp == 1) {
@@ -57,14 +57,14 @@ int binToDec() {
         int dec = 0, rem = 0, place = 0;
 
 
-        printf("\n      Digite o número que deseja converter de BIN para DEC \n");
+        printf("\n      Digite o nÃºmero que deseja converter de BIN para DEC \n");
         scanf("%ld", &num);
-        printf("    O número binário %ld convertido para decimal é ", num);
+        printf("    O nÃºmero binÃ¡rio %ld convertido para decimal Ã© ", num);
         while(num != 0) {
             rem = num % 10;
 
             if(rem != 1 && rem != 0) {
-                printf(" %ld, pois o número não é binário \n", num);
+                printf(" %ld, pois o nÃºmero nÃ£o Ã© binÃ¡rio \n", num);
                 return -1;
 
             } else if(rem == 1){
@@ -80,9 +80,9 @@ int binToDec() {
 
 int decToBin() {
         int num, bin = 0, rem = 0, place = 1;
-        printf("\n      Digite o número que deseja converter de DEC para BIN \n");
+        printf("\n      Digite o nÃºmero que deseja converter de DEC para BIN \n");
         scanf("%d", &num);
-        printf("    O número decimal %d convertido para binário é ", num);
+        printf("    O nÃºmero decimal %d convertido para binÃ¡rio Ã© ", num);
 
         while(num) {
             rem = num % 2;
